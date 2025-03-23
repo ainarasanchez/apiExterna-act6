@@ -1,1 +1,38 @@
-<p>user-detail works!</p>
+@if(isLoading === true){
+    <section class="container">
+  
+    </section>
+  }  
+  @if(isLoading === false) {
+    <section class="container py-4">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="card shadow">
+              <div class="card-body">
+      
+                <div class="d-flex justify-content-end">
+                  <app-buttons [myUser]="user" [volver]="true"></app-buttons>
+                </div>
+      
+                <div class="text-center">
+                  <img [src]="user?.image" class="rounded-circle mb-3" alt="Foto de usuario" width="150"/>
+      
+                  <h2>{{ user?.first_name }}</h2>
+                  <h3 class="text-muted">{{ user?.last_name }}</h3>
+      
+                  <div class="mt-4">
+                    <p><strong>Usuario:</strong> {{ user?.username }}</p>
+                    <p><strong>Email:</strong> {{ user?.email }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+  }
+
+
+  
+  

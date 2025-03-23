@@ -17,7 +17,7 @@ export class UserService {
     return lastValueFrom(this.httpClient.get<IResponse>(url))
   }
 
-  getById(_id: number): Promise<IUser> {
+  getById(_id: string): Promise<IUser> {
     return lastValueFrom(this.httpClient.get<IUser>(`${this.endPoint}/${_id}`))
   }
 

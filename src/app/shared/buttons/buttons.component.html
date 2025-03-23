@@ -3,7 +3,11 @@
 
   <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu">
     <li>
-      <button class="dropdown-item" type="button" [routerLink]="['/user', myUser?._id]">Ver detalle</button>
+      @if (volver) {
+        <button class="dropdown-item" type="button" [routerLink]="['/home', myUser?._id]">Volver</button>
+      } @else {
+        <button class="dropdown-item" type="button" [routerLink]="['/users', myUser?._id]">Ver detalle</button>
+      }
     </li>
 
     <li>

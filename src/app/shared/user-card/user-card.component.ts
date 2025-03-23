@@ -10,7 +10,7 @@ import { ButtonsComponent } from "../buttons/buttons.component";
   styleUrl: './user-card.component.css'
 })
 export class UserCardComponent {
-  @Input() myUser!: IUser
+  @Input() user!: IUser
 
   deleteUser(event: Boolean) {
 
