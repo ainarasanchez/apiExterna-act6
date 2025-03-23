@@ -21,7 +21,7 @@
 
   <div class="row g-4 justify-content-center my-4">
     @for(user of arrUsers ; track user._id){
-      <article class="col-12 col-md-6 col-lg-4" app-user-card [myUser]="user">
+      <article class="col-12 col-md-6 col-lg-4" app-user-card [user]="user">
       </article>
     }
   </div>

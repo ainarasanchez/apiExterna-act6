@@ -54,19 +54,6 @@ export class HomeComponent {
   
   
 /*
-  ngOnInit() {
-    this.loadUsers()
-  }
-
-  async loadUsers() {
-    try {
-      const resp = await this.UsersService.getAllPromise('');
-      // La API devuelve un objeto con "results", no un array a secas
-      this.arrUsers = resp.results; 
-    } catch (err) {
-      console.error(err);
-    }
-  }
 
   deleteEmployee(event: Boolean) {
     if (event) {
