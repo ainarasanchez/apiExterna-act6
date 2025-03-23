@@ -1,0 +1,22 @@
+.d-flex .gap-2 button {
+    background: transparent; 
+    border: none;      
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
+    padding: 0.3rem;   
+  }
+  
+  .d-flex .gap-2 button i {
+    font-size: 1.5rem;
+    color: #333; 
+    transition: color 0.2s ease;
+  }
+  
+  .d-flex .gap-2 button.active i {
+    color: var(--bs-primary); 
+  }
+  
+  .d-flex .gap-2 button:hover i {
+    color: var(--bs-primary);
+  }
