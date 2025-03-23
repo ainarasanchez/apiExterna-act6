@@ -1,9 +1,19 @@
 <div class="dropdown">
-    <i class="bi bi-three-dots hover-info" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;"></i>
-  
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu">
-      <li><button class="dropdown-item" type="button">Ver detalle</button></li>
-      <li><button class="dropdown-item" type="button">Editar</button></li>
-      <li><button class="dropdown-item text-danger" type="button" (click)="deleteItemEmit.emit(myUser)">Borrar</button></li>
-    </ul>
-  </div>
+  <i class="bi bi-three-dots hover-info" type="button" id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;"></i>
+
+  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenu">
+    <li>
+      <button class="dropdown-item" type="button" [routerLink]="['/user', myUser?._id]">Ver detalle</button>
+    </li>
+
+    <li>
+      <button class="dropdown-item" type="button" [routerLink]="['/updateuser', myUser?._id]">Editar</button>
+    </li>
+
+    <li>
+      <button class="dropdown-item text-danger" type="button" (click)="deleteUser(myUser?._id)">Borrar</button>
+    </li>
+  </ul>
+</div>
+
+

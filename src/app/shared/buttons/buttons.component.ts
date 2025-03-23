@@ -6,7 +6,7 @@ import { toast } from 'ngx-sonner';
 
 @Component({
   selector: 'app-buttons',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './buttons.component.html',
   styleUrl: './buttons.component.css'
 })
@@ -20,7 +20,7 @@ export class ButtonsComponent {
   @Input() volver: Boolean = false;
 
   deleteUser(_id: string) {
-    toast(`Vas a borrar al empleado ${this.myUser.nombre} ${this.myUser.apellidos} `, {
+    toast(`Vas a borrar al empleado ${this.myUser.first_name} ${this.myUser.last_name} `, {
       action: {
         label: 'Aceptar',
         onClick: async () => {
@@ -28,7 +28,7 @@ export class ButtonsComponent {
           if (this.deleteItemEmit.observed) {
             this.deleteItemEmit.emit(true)
           } else {
-            this.router.navigate(['/dashboard', 'empleados'])
+            this.router.navigate(['/user'])
           }
 
         }
