@@ -1,10 +1,21 @@
 
-<div class="card bg-dark border border-3 border-white"  [routerLink]="['/user', myUser._id]">
-    <figure>
-      <img class="imagesBall" [src]="myUser.image" [alt]="myUser.first_name">
-    </figure>
-    <div class="p-3 text-center">
-      <h3 class="text-white">{{myUser.first_name}}</h3>
-      <p class="text-warning">{{myUser.email}}</p>
+<div 
+  class="card mb-2 shadow-sm rounded-3 px-3 py-2 bg-light d-flex align-items-center" 
+  [routerLink]="['/user', myUser._id]" 
+  style="cursor: pointer; transition: background-color 0.3s;">
+
+  <div class="row w-100 align-items-center">
+
+    <div class="col-auto">
+      <img [src]="myUser.image" [alt]="myUser.first_name" 
+           class="rounded-circle" 
+           style="width: 60px; height: 60px; object-fit: cover;">
     </div>
+
+    <div class="col">
+      <strong>{{ myUser.first_name }} {{ myUser.last_name }}</strong><br>
+      <small>{{ myUser.email }}</small>
+    </div>
+
   </div>
+</div>
