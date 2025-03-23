@@ -25,8 +25,8 @@ export class UserService {
     return lastValueFrom(this.httpClient.delete<IUser>(`${this.endPoint}/${_id}`));
   }
 
-  update(employee: IUser): Promise<IUser> {
-    let { _id, ...user } = employee;
+  update(user: IUser): Promise<IUser> {
+    let { _id, ...userBody } = user;
     return lastValueFrom(this.httpClient.put<IUser>(`${this.endPoint}/${_id}`, user)) 
   }
 

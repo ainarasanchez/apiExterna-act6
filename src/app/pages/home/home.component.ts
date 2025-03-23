@@ -49,30 +49,14 @@ export class HomeComponent {
       this.page = pageNumber;
       this.loadUsers();
     }
-  }
-  
-  
-  
-/*
-  ngOnInit() {
-    this.loadUsers()
-  }
 
-  async loadUsers() {
-    try {
-      const resp = await this.UsersService.getAllPromise('');
-      // La API devuelve un objeto con "results", no un array a secas
-      this.arrUsers = resp.results; 
-    } catch (err) {
-      console.error(err);
+    deleteUser(event: Boolean) {
+      if (event) {
+        this.loadUsers()
+      }
     }
   }
 
-  deleteEmployee(event: Boolean) {
-    if (event) {
-      //refrescar la lista de empleados this.arrEmployees
-      this.loadUsers()
-    }
-  }*/
+
 
 
