@@ -49,17 +49,14 @@ export class HomeComponent {
       this.page = pageNumber;
       this.loadUsers();
     }
-  }
-  
-  
-  
-/*
 
-  deleteEmployee(event: Boolean) {
-    if (event) {
-      //refrescar la lista de empleados this.arrEmployees
-      this.loadUsers()
+    deleteUser(event: Boolean) {
+      if (event) {
+        this.loadUsers()
+      }
     }
-  }*/
+  }
+
+
 
 
