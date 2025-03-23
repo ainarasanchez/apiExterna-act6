@@ -11,8 +11,9 @@ export class UserService {
   private endPoint: string = 'https://peticiones.online/api/users';
   private httpClient = inject(HttpClient);
 
-  getAllPromise(url: string): Promise<IResponse> {
-    url = (url === "") ? 'https://peticiones.online/api/users' : url
+
+  getAllPromise(page: number = 1): Promise<IResponse> {
+    const url = `https://peticiones.online/api/users?page=${page}`
     return lastValueFrom(this.httpClient.get<IResponse>(url))
   }
 
