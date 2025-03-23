@@ -1,1 +1,18 @@
-<p>header works!</p>
+<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+        <a class="navbar-brand d-flex align-items-center">
+            <figure class="logo m-0 d-flex align-items-center">
+                <img src="./images/logoIcon.webp" class="img-fluid align-center me-2" alt="" [routerLink]="['/home']">Gestión de Empleados
+            </figure>
+        </a>
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+                <a class="nav-link hover-info d-flex align-items-center" [routerLink]="['/newuser']">
+                    <i class="bi bi-person-plus-fill me-2"></i>
+                    Nuevo Empleado
+                </a>
+            </li>
+        </ul>
+    </div>
+  </nav>
+
