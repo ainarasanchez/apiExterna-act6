@@ -2,19 +2,19 @@
 <section class="card mb-2 border border-info rounded-3 px-3 py-2 d-flex align-items-center shadow">
 
   <div class="position-absolute top-0 end-0 p-2">
-    <app-buttons [myUser]="myUser" [volver]="false" (deleteItemEmit)="deleteUser($event)"></app-buttons>
+    <app-buttons [myUser]="user" [volver]="false" (deleteItemEmit)="deleteUser($event)"></app-buttons>
   </div>
 
   <div class="d-flex flex-column align-items-center text-center">
     <div class="col-auto">
-      <img [src]="myUser.image" [alt]="myUser.first_name" 
+      <img [src]="user.image" [alt]="user.first_name" 
            class="rounded-circle" 
            style="width: 80px; height: 80px; object-fit: cover;">
     </div>
 
     <div class="col">
-      <strong>{{ myUser.first_name }} {{ myUser.last_name }}</strong><br>
-      <small class="text-truncate d-inline-block" style="max-width: 250px">{{ myUser.email }}</small>
+      <strong>{{ user.first_name }} {{ user.last_name }}</strong><br>
+      <small class="text-truncate d-inline-block" style="max-width: 250px">{{ user.email }}</small>
     </div>
 
   </div>
